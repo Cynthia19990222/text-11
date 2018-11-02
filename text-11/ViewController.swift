@@ -10,40 +10,47 @@ import UIKit
 
 class ViewController: UIViewController {
     var temp:Double = 0
-    var operatorflag:Int = 0
+    var operatorflag = 0
+    
+    @IBOutlet var wyyX: UITextField!
     
 
-    @IBOutlet var wyyX: UITextField!
+   
     
     
     @IBAction func add(_ sender: Any) {
         operatorflag = 1
-        wyyX.text = ""
+        
         temp = Double(wyyX.text!)!
+        wyyX.text = ""
         
     }
     
     @IBAction func minus(_ sender: Any) {
         operatorflag = 2
-        wyyX.text = ""
+        
         temp = Double(wyyX.text!)!
+        wyyX.text = ""
         
     }
     
     @IBAction func mul(_ sender: Any) {
         operatorflag = 3
-        wyyX.text = ""
+        
         temp = Double(wyyX.text!)!
+        wyyX.text = ""
         
     }
     @IBAction func divi(_ sender: Any) {
         operatorflag = 4
-        wyyX.text = ""
+        
         temp = Double(wyyX.text!)!
+        wyyX.text = ""
         
     }
     @IBAction func b1(_ sender: Any) {
-        wyyX.text = wyyX.text! + "1"
+       wyyX.text = wyyX.text! + "1"
+
     }
     
     @IBAction func b2(_ sender: Any) {
@@ -75,62 +82,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func b9(_ sender: Any) {
-        wyyX.text = wyyX.text! + "9"
+        wyyX.text =  wyyX.text! + "9"
     }
     @IBAction func b0(_ sender: Any) {
         wyyX.text = wyyX.text! + "0"
     }
-    @IBAction func res(_ sender: Any) {
-        if operatorflag==1
+    @IBAction func res(_ sender: Any)
+    {
+        if operatorflag == 1
         {
           temp = temp + Double(wyyX.text!)!
           wyyX.text = "\(temp)"
         }
-        if operatorflag==2
+        if operatorflag == 2
         {
-            temp = temp + Double(wyyX.text!)!
+            temp = temp - Double(wyyX.text!)!
             wyyX.text = "\(temp)"
         }
-        if operatorflag==3
+        if operatorflag == 3
         {
-            temp = temp + Double(wyyX.text!)!
+            temp = temp * Double(wyyX.text!)!
             wyyX.text = "\(temp)"
         }
-        if operatorflag==4
+        if operatorflag == 4
         {
-            temp = temp + Double(wyyX.text!)!
+            temp = temp / Double(wyyX.text!)!
             wyyX.text = "\(temp)"
         }
-        if operatorflag==5
-        {
-            temp = temp + Double(wyyX.text!)!
-            wyyX.text = "\(temp)"
-        }
-        if operatorflag==6
-        {
-            temp = temp + Double(wyyX.text!)!
-            wyyX.text = "\(temp)"
-        }
-        if operatorflag==7
-        {
-            temp = temp + Double(wyyX.text!)!
-            wyyX.text = "\(temp)"
-        }
-        if operatorflag==8
-        {
-            temp = temp + Double(wyyX.text!)!
-            wyyX.text = "\(temp)"
-        }
-        if operatorflag==9
-        {
-            temp = temp + Double(wyyX.text!)!
-            wyyX.text = "\(temp)"
-        }
-        if operatorflag==0
-        {
-            temp = temp + Double(wyyX.text!)!
-            wyyX.text = "\(temp)"
-        }
+        
     }
     
     @IBAction func bdelete(_ sender: Any) {
